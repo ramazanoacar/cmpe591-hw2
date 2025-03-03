@@ -31,36 +31,27 @@ Bu grafik, eğitim sürecinde ajanımızın ödül kazanma performansını göst
 
 
 
-
-![Reward](/reward.png)
-
 2️⃣ Ödül Grafiği
-
+![Reward](/reward.png)
 Her bir episode için ajanımızın aldığı toplam ödül değerleri gösterilmektedir.
 
-
-![RPS](/rps.png)
-
 3️⃣ Adım Başına Ödül (Reward Per Step)
-
+![RPS](/rps.png)
 Bu grafik, her adım başına alınan ortalama ödülleri gösterir. Öğrenme sürecinin istikrarlı hale gelmesiyle ödüller artış eğilimi göstermektedir.
 
-
+4️⃣ Smoothed Reward (Pencere Boyutu: 50)
 ![Smoothed Reward 50](/smoothed_reward_50.png)
-
 Bu üstteki grafik, 50 pencere genişliğinde hareketli ortalama alınarak ödüllerin nasıl değiştiğini gösterir. Eğitim süreci boyunca daha düzenli bir artış eğilimi gözlemlenmektedir.
 
-
+5️⃣ Smoothed Reward (Pencere Boyutu: 100)
 ![Smoothed Reward 100](/smoothed_reward_100.png)
-
 Bu üstteki grafik, 100 pencere genişliğinde hareketli ortalama ile daha düzgün hale getirilmiş ödülleri göstermektedir. Eğitim ilerledikçe ortalama ödüllerde yükselme olduğu açıkça görülmektedir.
 
-
+6️⃣ Smoothed Reward Per Step (Pencere Boyutu: 50)
 ![Smoothed RPS 50](/smoothed_rps_50.png)
-
 Bu üstteki grafik, 50 pencere genişliğinde hareketli ortalama ile adım başına alınan ödüllerin değişimini gösterir. Eğitim sürecinde kararlı bir artış gözlemlenmiştir.
 
-
+7️⃣ Smoothed Reward Per Step (Pencere Boyutu: 100)
 ![Smoothed RPS 100](/smoothed_rps_100.png)
 Daha büyük bir pencere genişliği ile adım başına ödüllerdeki genel eğilim daha net bir şekilde görülmektedir. Ödüllerde zamanla artış olduğu gözlemlenmiştir.
 
