@@ -1,10 +1,8 @@
-# DQN Training on Hw2Env
+# HW2
 
-Bu proje, **Deep Q-Network (DQN)** algoritmasını kullanarak **Hw2Env** ortamında bir ajan eğitmek için oluşturulmuştur.
+## Training Process
 
-## Eğitim Süreci
-
-Eğitim sürecinde aşağıdaki parametreleri kullandık:
+For our training implementation, we used the following parameters:
 
 ```python
 num_episodes = 3800
@@ -19,45 +17,35 @@ buffer_size = 100000
 learning_rate = 1e-3
 ```
 
-Eğitimi max_timestep 100 ile gerçekleştirdik. Yiğit hocanın parametreleriyle yapılan uzun süreli bir eğitimin ardından, datayı kaydetmediğimizi fark ettik ve çıktılar boştu. Bu süreçten öğrendiklerimizi kullanarak epsilon decay ve min epsilon değerlerini yukarıda belirttiğimiz şekilde güncelledik.
-
-
+We conducted training with a maximum timestep of 100. After an extended training session using the instructor's parameters, we realized we hadn't saved the data properly, resulting in empty outputs. Learning from this experience, we updated the epsilon decay and minimum epsilon values as specified above.
 
 ![DQN Training Plot](/dqn_training_plot.png)
 
-1️⃣ Genel Eğitim Grafiği
+## Performance Analysis
 
-Bu grafik, eğitim sürecinde ajanımızın ödül kazanma performansını göstermektedir. Eğitim ilerledikçe ortalama ödül değerinin arttığı gözlemlenmiştir.
+### Overall Training Performance
+The graph above illustrates our agent's reward performance throughout the training process. We observed an upward trend in average rewards as training progressed, indicating successful learning.
 
-
-
-2️⃣ Ödül Grafiği
+### Reward Progression
 ![Reward](/reward.png)
-Her bir episode için ajanımızın aldığı toplam ödül değerleri gösterilmektedir.
+This graph displays the total rewards obtained by our agent for each episode. The increasing trend demonstrates the agent's improving ability to maximize rewards over time.
 
-3️⃣ Adım Başına Ödül (Reward Per Step)
+### Reward Per Step
 ![RPS](/rps.png)
-Bu grafik, her adım başına alınan ortalama ödülleri gösterir. Öğrenme sürecinin istikrarlı hale gelmesiyle ödüller artış eğilimi göstermektedir.
+This visualization shows the average rewards received per step. As the learning process stabilized, we observed a consistent upward trend in per-step rewards, suggesting more efficient decision-making.
 
-4️⃣ Smoothed Reward (Pencere Boyutu: 50)
+### Smoothed Reward (Window Size: 50)
 ![Smoothed Reward 50](/smoothed_reward_50.png)
-Bu üstteki grafik, 50 pencere genişliğinde hareketli ortalama alınarak ödüllerin nasıl değiştiğini gösterir. Eğitim süreci boyunca daha düzenli bir artış eğilimi gözlemlenmektedir.
+Using a moving average with a window size of 50, this graph reveals a more consistent pattern in reward progression. The smoothing helps filter out noise and highlights the steady improvement throughout training.
 
-5️⃣ Smoothed Reward (Pencere Boyutu: 100)
+### Smoothed Reward (Window Size: 100)
 ![Smoothed Reward 100](/smoothed_reward_100.png)
-Bu üstteki grafik, 100 pencere genişliğinde hareketli ortalama ile daha düzgün hale getirilmiş ödülleri göstermektedir. Eğitim ilerledikçe ortalama ödüllerde yükselme olduğu açıkça görülmektedir.
+With a larger window size of 100, the reward trend becomes even clearer. The graph demonstrates a definitive upward trajectory in average rewards as training advances, confirming effective learning.
 
-6️⃣ Smoothed Reward Per Step (Pencere Boyutu: 50)
+### Smoothed Reward Per Step (Window Size: 50)
 ![Smoothed RPS 50](/smoothed_rps_50.png)
-Bu üstteki grafik, 50 pencere genişliğinde hareketli ortalama ile adım başına alınan ödüllerin değişimini gösterir. Eğitim sürecinde kararlı bir artış gözlemlenmiştir.
+This graph shows the moving average of rewards per step with a window size of 50. The steady increase indicates that our agent became progressively more efficient at maximizing rewards with each action.
 
-7️⃣ Smoothed Reward Per Step (Pencere Boyutu: 100)
+### Smoothed Reward Per Step (Window Size: 100)
 ![Smoothed RPS 100](/smoothed_rps_100.png)
-Daha büyük bir pencere genişliği ile adım başına ödüllerdeki genel eğilim daha net bir şekilde görülmektedir. Ödüllerde zamanla artış olduğu gözlemlenmiştir.
-
-
-
-
-
-
-
+With a larger window size, the general trend in per-step rewards becomes more apparent. The consistent improvement over time demonstrates that our agent developed increasingly optimal policies for the environment.
