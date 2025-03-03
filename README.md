@@ -52,7 +52,7 @@ The graph above illustrates our agent's reward performance throughout the traini
 
 ### Reward Progression
 ![Reward](/reward.png)
-This graph displays the total rewards obtained by our agent for each episode. The increasing trend demonstrates the agent's improving ability to maximize rewards over time.
+This graph displays the total rewards obtained by our agent for each episode. Its hard to comment on this data since it fluctuates a lot. We made smoothed version of this data for better visualisation.
 
 ### Reward Per Step
 ![RPS](/rps.png)
