@@ -1,5 +1,29 @@
 # HW2
 
+
+## Training
+
+You can train your DQN model using the following command:
+```python
+from hw2_yy import train, test
+import torch
+
+# Train
+policy_net, rewards, rps = train(num_episodes=1000)
+```
+
+
+## Testing
+
+You can test the model using the following command:
+```python
+from hw2_yy import train, test
+import torch
+
+# Load
+avg = test(num_episodes=5)
+```
+
 ## Training Process
 
 For our training implementation, we used the following parameters:
