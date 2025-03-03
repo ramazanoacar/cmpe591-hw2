@@ -41,7 +41,7 @@ buffer_size = 100000
 learning_rate = 1e-3
 ```
 
-We conducted training with a maximum timestep of 100. After an extended training session using the instructor's parameters, we realized we hadn't saved the data properly, resulting in empty outputs. Learning from this experience, we updated the epsilon decay and minimum epsilon values as specified above.
+We conducted training with a maximum timestep of 100. After an extended training session using the instructor's parameters, we realized we hadn't saved the data properly, resulting in empty outputs. Learning from this experience, we updated the epsilon decay and minimum epsilon values as specified above. Since the data is fluctuating a lot we also smoothed the data for better understanding the pattern. 
 
 ![DQN Training Plot](/dqn_training_plot.png)
 
