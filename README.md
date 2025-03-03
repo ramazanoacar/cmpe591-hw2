@@ -56,7 +56,7 @@ This graph displays the total rewards obtained by our agent for each episode. It
 
 ### Reward Per Step
 ![RPS](/rps.png)
-This visualization shows the average rewards received per step. As the learning process stabilized, we observed a consistent upward trend in per-step rewards, suggesting more efficient decision-making.
+This visualization shows the average rewards received per step. As the learning process stabilized, we observed an upward trend in per-step reward. Also since data fluctuates a lot its hard to read so we put this image as well as the smoothed version. 
 
 ### Smoothed Reward (Window Size: 50)
 ![Smoothed Reward 50](/smoothed_reward_50.png)
