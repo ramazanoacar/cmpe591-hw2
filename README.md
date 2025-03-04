@@ -1,4 +1,4 @@
-# HW2
+# HW2 - Ramazan Onur Acar - Batuhan Solmaz
 
 
 ## Training
